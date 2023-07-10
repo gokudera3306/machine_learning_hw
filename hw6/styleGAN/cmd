@@ -1,0 +1,6 @@
+stylegan2_pytorch --data ./faces/ --name testGAN --results_dir ./styleGAN/results/ --models_dir ./styleGAN/model/ --image-size 64 --attn-layers [1,2]
+
+
+stylegan2_pytorch --generate --load-from 150 --image-size 64 --attn-layers [1,2] --num_image_tiles 1
+
+cd ./results/default/ && tar -zcvf ../images.tgz *.jpg
